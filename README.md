@@ -4,7 +4,7 @@
 
 My name is Jacob Kuchta 😃. I am from Arlington, Virginia and currently working for Booz Allen Hamilton as Data Scientist. I love to travel and learn new things. ✈️
 ## 💻 Adventures in Data Science
-* University of Virginia (UVA) MS in Data Science Program
+* University of Virginia (UVA) MS in Data Science
 * Booz Allen Hamilton (BAH) Data Science 5k 
 ## ⚡ Technologies
 Talk to me about:
