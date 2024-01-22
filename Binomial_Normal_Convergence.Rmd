@@ -1,0 +1,61 @@
+---
+title: "Binomial and Normal Dist. Convergence"
+author: "Jacob Kuchta"
+date: "2024-01-22"
+output: html_document
+---
+
+## Visual representation of the Central Limit Theorem. 
+
+Below, we observe that as 'n' increases, the binomial distribution converges to the normal distribution. We see that
+the binomial distribution continues to become smoother and more symmetric.
+
+We are visually confirming the fact that as sample size
+becomes larger, the distribution of the sample mean approaches a 
+normal distribution, regardless of the shape of the original.
+
+
+
+```{r}
+
+rm(list = ls())
+cat("\014")
+
+
+# Set a seed for reproducibility
+set.seed(123)
+
+# Number of observations in each sample
+n_values <- c(10, 25, 50, 100, 250, 500, 1000)
+
+# Generate random samples from Binomial distribution for different N values
+for (n in n_values) {
+  binomial_data <- rbinom(10000, size = n, prob = 0.5)
+  
+  # Create histogram using hist() function
+  hist(binomial_data, main = paste("Binomial Distribution (N =", n,")"))
+  
+    # Save the plot as a PNG file
+  png(filename = paste("binomial_", n, ".png", sep = ""))
+  dev.off()
+
+# Generate random samples from Normal distribution for different N values
+  normal_data <- rnorm(10000, mean = n * 0.5, sd = sqrt(n * 0.25))
+  
+  # Create histogram using hist() function
+  hist(normal_data, main = paste("Normal Distribution (N =", n, ")"))
+  
+   # Save the plot as a PNG file
+  png(filename = paste("normal_", n, ".png", sep = ""))
+  dev.off()
+ }
+
+```
+
+
+
+
+
+
+
+
